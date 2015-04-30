@@ -23,6 +23,7 @@ public  class Lina extends Hero{
   
    public void attack(Hero hero,Skill skill){
    hero.hp-=skill.getDamage();
+   System.out.println("Lina attacked " + hero.getName() + " with "+skill.getSkillName()+ " and dealt "+skill.getDamage()+" damage.");
    }
    /*
    public void takeDamage(Hero hero, int damage){

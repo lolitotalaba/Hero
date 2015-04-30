@@ -15,14 +15,13 @@ public class Activity2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        UI ui=new UI();
-        ui.show(true);
+       
         // LINA SKILLS
       Skill lina1= new Skill(120,"Fissure",1);
       Skill lina2= new Skill(80,"Fireblast",1);
       Skill lina3= new Skill(200,"Rupture",1);
       Lina lina= new Lina("Lina",550,"Intelligence",lina1,lina2,lina3);
-      // lina.upgradeSkillLevel(lina1,50);
+     
       
       Skill invo1= new Skill(100,"Meat Hook",1);
       Skill invo2= new Skill(50,"Rot",1);
@@ -45,12 +44,20 @@ public class Activity2 {
       Skill wd3= new Skill(350,"Focus Fire",1);
       WitchDoctor wd= new WitchDoctor("WitchDoctor",450,"Strength",wd1,wd2,wd3);
       
-      lina.block(invoker, invo3, lina1);
-      System.out.println("Current Stats: \n" + lina.toString(lina));
-      System.out.println("\nCurrent Stats:: \n" + invoker.toString(invoker));
-      System.out.println("\nCurrent Stats:: \n" + axe.toString(axe));
-      System.out.println("\nCurrent Stats:: \n" + wr.toString(wr));
-      System.out.println("\nCurrent Stats:: \n" + wd.toString(wr));
-    }
+    //  wd.block(invoker, invo3, wd1); // sample of block statement
+       // lina.upgradeSkillLevel(lina1,50); // sample of skillUpgrade statement
+      
+      System.out.println("Current Stats: \n" + lina.toString(lina)); //before attack
+      System.out.println("\nCurrent Stats:: \n" + wd.toString(wd)); //before attack
+      lina.attack(wd, lina1);                                          //lina attacks wd
+      System.out.println("Result Stats: \n" + lina.toString(lina)); //after attack
+      System.out.println("\nResult Stats:: \n" + wd.toString(wd)); //after attack
+       
+       
+      //System.out.println("\nCurrent Stats:: \n" + invoker.toString(invoker));
+      //System.out.println("\nCurrent Stats:: \n" + axe.toString(axe));
+     // System.out.println("\nCurrent Stats:: \n" + wr.toString(wr));
+      //System.out.println("\nCurrent Stats:: \n" + wd.toString(wd));
+              }
     
 }

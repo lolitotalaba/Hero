@@ -22,6 +22,7 @@ public class WitchDoctor extends Hero{
  
    public void attack(Hero hero,Skill skill){
    hero.hp-=skill.getDamage();
+   System.out.println("Witchdoctor attacked " + hero.getName() + " with "+skill.getSkillName()+ " and dealt "+skill.getDamage()+" damage.");
    }
    public void block(Hero attacker,Skill attackingSkill, Skill defendingSkill){
    if(attackingSkill.getDamage()>= defendingSkill.getDamage()){
